@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#8f3f2b"/>
+  <rect x="4" y="4" width="56" height="56" rx="8.5" fill="none" stroke="#fffaf1" stroke-opacity="0.22" stroke-width="1.5"/>
+  <text x="32" y="33.5" text-anchor="middle" dominant-baseline="central"
+        font-family="'Noto Serif SC','Source Han Serif SC','Songti SC','STSong','SimSun',serif"
+        font-size="42" font-weight="600" fill="#fffaf1">字</text>
+</svg>

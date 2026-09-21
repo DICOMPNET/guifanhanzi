@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>通用规范汉字表 · 规范字与繁体字、异体字对照</title>
+  <meta name="description" content="《通用规范汉字表》8105 字在线检索：规范字、繁体字、异体字对照（附表一）与附注，支持按 Unicode 码位或字符检索，可切换中文自由 webfonts。">
+
+  <!-- 中文自由 webfonts（来自 free-fonts，按 unicode-range 切片，仅按需下载） -->
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/wenjin-mincho@1.0.1/wenjin-mincho.css">
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/genki-mincho@1.0.1/genki-mincho.css">
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/genyo-mincho@1.0.1/genyo-mincho.css">
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/black-sugar-plum-candy@1.0.1/black-sugar-plum-candy.css">
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/lxgw-wenkai@1.0.1/lxgw-wenkai.css">
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/lxgw-wenkai-gb@1.0.1/lxgw-wenkai-gb.css">
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/lxgw-wenkai-tc@1.0.1/lxgw-wenkai-tc.css">
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/jigmo@1.0.1/jigmo.css">
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/jigmo-sc@1.0.1/jigmo-sc.css">
+  <link rel="stylesheet" href="https://unpkg.com/@free-fonts/jigmo-tc@1.0.1/jigmo-tc.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500&amp;family=Noto+Serif+SC:wght@400;500;600&amp;display=swap">
+
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f2e8;
+      --paper: #fffaf1;
+      --paper-soft: #f1e7d8;
+      --panel: rgba(255, 250, 241, 0.88);
+      --panel-solid: #fffaf1;
+      --line: rgba(72, 56, 40, 0.18);
+      --line-strong: rgba(72, 56, 40, 0.32);
+      --text: #211b16;
+      --muted: #766c60;
+      --faint: #a2978a;
+      --accent: #8f3f2b;
+      --accent-2: #4d6d62;
+      --danger: #a8443d;
+      --field: rgba(255, 252, 246, 0.92);
+      --card-head: rgba(247, 239, 226, 0.72);
+      --row: rgba(255, 252, 246, 0.72);
+      --row-alt: rgba(247, 239, 226, 0.42);
+      --button-active-text: #fffaf1;
+      --primary-bg: #2f5147;
+      --primary-border: #2f5147;
+      --shadow: 0 18px 50px rgba(51, 35, 20, 0.12);
+      --han-size: 30px;
+      --han-font: "Noto Serif SC";
+      --han-weight: 400;
+      --han-fallback: "WenJin Mincho Plane 0", "WenJin Mincho Plane 2", "WenJin Mincho Plane 3", "Jigmo", "Jigmo SC", serif;
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #171512;
+      --paper: #211d18;
+      --paper-soft: #2b251e;
+      --panel: rgba(33, 29, 24, 0.88);
+      --panel-solid: #211d18;
+      --line: rgba(232, 218, 197, 0.16);
+      --line-strong: rgba(232, 218, 197, 0.28);
+      --text: #f4eadc;
+      --muted: #b8aa98;
+      --faint: #897b6c;
+      --accent: #d08468;
+      --accent-2: #9fc1b2;
+      --danger: #df8f86;
+      --field: rgba(18, 16, 13, 0.82);
+      --card-head: rgba(18, 16, 13, 0.52);
+      --row: rgba(18, 16, 13, 0.42);
+      --row-alt: rgba(18, 16, 13, 0.24);
+      --button-active-text: #171512;
+      --primary-bg: #c99c79;
+      --primary-border: #c99c79;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 16% 12%, rgba(143, 63, 43, 0.10), transparent 30%),
+        linear-gradient(180deg, var(--bg), var(--paper-soft));
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    body.is-modal-open { overflow: hidden; }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.32;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
+      mix-blend-mode: multiply;
+      z-index: 0;
+    }
+
+    main {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .theme-toggle {
+      width: 36px;
+      height: 36px;
+      display: inline-grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--field);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 17px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .hero {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      border-radius: 8px;
+      padding: 34px 32px;
+      background: var(--panel);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .hero-left { flex: 1; min-width: 0; }
+    .hero-right { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; flex-shrink: 0; }
+
+    .eyebrow {
+      width: fit-content;
+      margin-top: 14px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent-2);
+      background: var(--field);
+      font-size: 13px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Noto Serif SC", ui-serif, Georgia, serif;
+      font-weight: 600;
+      line-height: 1.1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1em;
+    }
+
+    .title-kicker { font-size: clamp(16px, 2.4vw, 24px); color: var(--muted); font-weight: 400; }
+    .title-main { font-size: clamp(38px, 6vw, 68px); }
+
+
+    .controls {
+      position: sticky; top: 0; z-index: 6;
+      margin-top: 22px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px rgba(51, 35, 20, 0.08);
+    }
+
+    .controls-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+    .search-wrap { position: relative; flex: 1 1 300px; min-width: 220px; }
+    .search-wrap input {
+      width: 100%; height: 42px;
+      border: 1px solid var(--line); border-radius: 8px;
+      padding: 8px 40px 8px 14px;
+      background: var(--field); color: var(--text);
+      font: 15px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+    .search-wrap input:focus { outline: none; border-color: var(--accent); }
+    .search-clear {
+      position: absolute; right: 6px; top: 6px;
+      width: 30px; height: 30px; border: 0; border-radius: 6px;
+      background: transparent; color: var(--muted); cursor: pointer; font-size: 18px;
+    }
+    .search-clear:hover { color: var(--text); }
+
+    .ac-list {
+      position: absolute; top: calc(100% + 4px); left: 0; right: 0;
+      background: var(--panel-solid); border: 1px solid var(--line);
+      border-radius: 8px; box-shadow: 0 8px 24px rgba(51,35,20,.14);
+      z-index: 200; overflow: hidden;
+    }
+    .ac-item {
+      display: flex; align-items: center; gap: 10px;
+      padding: 7px 14px; cursor: pointer; border-bottom: 1px solid var(--line);
+    }
+    .ac-item:last-child { border-bottom: 0; }
+    .ac-item:hover, .ac-item.is-active { background: var(--row-alt); }
+    .ac-char { font-family: var(--han-font), var(--han-fallback); font-size: 22px; min-width: 28px; line-height: 1.2; }
+    .ac-py { color: var(--muted); font-size: 13px; flex: 1; }
+    .ac-serial { color: var(--faint); font-size: 12px; font-variant-numeric: tabular-nums; }
+
+    .inspector-py { margin-top: 4px; }
+
+    label { color: var(--muted); font-size: 13px; }
+
+    .field-group { display: inline-flex; align-items: center; gap: 8px; }
+
+    select, .btn {
+      min-height: 40px;
+      border: 1px solid var(--line); border-radius: 8px;
+      padding: 6px 12px;
+      background: var(--field); color: var(--text);
+      font: inherit; font-size: 14px; cursor: pointer;
+    }
+    select:focus, .btn:focus-visible { outline: none; border-color: var(--accent); }
+
+
+
+    .switch {
+      display: inline-flex; align-items: center; gap: 7px;
+      border: 1px solid var(--line); border-radius: 8px;
+      padding: 8px 10px; min-height: 40px;
+      background: var(--field); color: var(--text); cursor: pointer; font-size: 13px;
+    }
+    .switch input { accent-color: var(--accent); }
+
+    .slider-wrap { display: inline-flex; align-items: center; gap: 8px; min-width: 160px; }
+    input[type="range"] { accent-color: var(--accent); }
+
+    .result-meta { margin: 14px 2px 8px; color: var(--muted); font-size: 13px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .result-meta .warn { color: var(--danger); }
+
+    .table-wrap {
+      border: 1px solid var(--line); border-radius: 8px; overflow: clip;
+      background: var(--panel-solid); box-shadow: 0 10px 30px rgba(51, 35, 20, 0.06);
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+
+    thead th {
+      position: sticky; top: var(--controls-h, 0px); z-index: 3;
+      background: var(--card-head);
+      backdrop-filter: blur(10px);
+      text-align: left; font-weight: 500; font-size: 12px; letter-spacing: 0.04em;
+      color: var(--muted);
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line-strong);
+      white-space: nowrap;
+    }
+
+    tbody tr { border-bottom: 1px solid var(--line); cursor: pointer; }
+    tbody tr:nth-child(even) { background: var(--row-alt); }
+    tbody tr:hover { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+    td { padding: 9px 12px; vertical-align: middle; }
+
+    .col-serial { width: 68px; color: var(--faint); font: 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; }
+    .col-cp { width: 108px; color: var(--muted); font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; }
+    .col-gc { width: 74px; }
+    .col-note { width: 132px; }
+    .col-py { width: 120px; }
+    .py { display: inline-block; font-size: 12px; color: var(--muted); margin-right: 3px; white-space: nowrap; }
+    .py-more { border: none; background: none; color: var(--accent-2); cursor: pointer; font: inherit; font-size: 12px; padding: 0; }
+
+    .han {
+      font-family: var(--han-font), var(--han-fallback);
+      font-weight: var(--han-weight);
+    }
+    .gc {
+      font-size: var(--han-size); line-height: 1.1;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .lv-badge {
+      font-size: 10px; font-weight: 600; color: var(--button-active-text);
+      background: var(--accent-2); border-radius: 4px; padding: 1px 5px; line-height: 1.5;
+      vertical-align: middle;
+    }
+    .lv-badge[data-lv="1"] { background: #4d6d62; }
+    .lv-badge[data-lv="2"] { background: #8f6a3f; }
+    .lv-badge[data-lv="3"] { background: #8f3f2b; }
+
+    .forms { display: flex; flex-wrap: wrap; gap: 8px; }
+    .form {
+      display: inline-flex; flex-direction: column; align-items: center;
+      padding: 3px 8px 4px; border: 1px solid var(--line); border-radius: 7px;
+      background: var(--field); min-width: 40px;
+      position: relative;
+    }
+    .form .fchar { font-size: calc(var(--han-size) * 0.86); line-height: 1.15; }
+    .form .fcp { font: 10px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--faint); }
+    .form.is-variant { border-style: dashed; }
+    .fn-badge {
+      position: absolute; top: -7px; right: -7px;
+      font-size: 9px; font-weight: 700; line-height: 1;
+      padding: 2px 4px; border-radius: 999px;
+      color: var(--button-active-text);
+    }
+    .fn-badge[data-cat="繁体另做规范字"] { background: #8f3f2b; }
+    .fn-badge[data-cat="异体另做规范字"] { background: #8f6a3f; }
+    .fn-badge[data-cat="异体字"] { background: #4d6d62; }
+
+    .cell-empty { color: var(--faint); font-size: 13px; }
+
+    .note-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .note-tag { font-size: 11px; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+
+    #sentinel { height: 1px; }
+    .loading { padding: 18px; text-align: center; color: var(--muted); font-size: 13px; }
+
+    .legend { margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .legend section {
+      border: 1px solid var(--line); border-radius: 8px; padding: 16px;
+      background: var(--panel); backdrop-filter: blur(12px);
+    }
+    .legend h2 { margin: 0 0 10px; font-size: 14px; font-weight: 600; }
+    .legend p { margin: 6px 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .legend .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+    .legend .han-inline { font-family: var(--han-font), var(--han-fallback); }
+    .footer { margin: 28px 2px 12px; color: var(--faint); font-size: 12px; line-height: 1.8; }
+    .footer a { color: var(--accent-2); }
+
+    /* Inspector modal */
+    .inspector {
+      position: fixed; inset: 0; z-index: 30; display: none;
+      align-items: center; justify-content: center; padding: 24px;
+      background: rgba(20, 16, 12, 0.46); backdrop-filter: blur(12px);
+    }
+    .inspector[aria-hidden="false"] { display: flex; }
+    .inspector-panel {
+      width: min(920px, 100%); max-height: calc(100vh - 48px);
+      display: flex; flex-direction: column; overflow: hidden;
+      border: 1px solid var(--line-strong); border-radius: 10px;
+      background: var(--panel-solid); box-shadow: 0 24px 80px rgba(20, 16, 12, 0.3);
+    }
+    .inspector-head {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;
+      padding: 18px 20px; border-bottom: 1px solid var(--line); background: var(--card-head);
+    }
+    .inspector-head .big {
+      font-family: var(--han-font), var(--han-fallback);
+      font-size: 72px; line-height: 1; margin-right: 4px;
+    }
+    .inspector-title-row { display: flex; align-items: center; gap: 14px; }
+    .inspector-meta { color: var(--muted); font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace; margin-top: 6px; }
+    .inspector-close { width: 34px; height: 34px; flex: 0 0 auto; padding: 0; display: grid; place-items: center; font-size: 20px; line-height: 1; border: 1px solid var(--line); border-radius: 8px; background: var(--field); color: var(--text); cursor: pointer; }
+    .inspector-body { padding: 18px 20px; overflow: auto; }
+    .insp-section { margin-bottom: 20px; }
+    .insp-section h3 { margin: 0 0 10px; font-size: 13px; font-weight: 600; color: var(--muted); }
+    .insp-forms { display: flex; flex-wrap: wrap; gap: 10px; }
+    .insp-form {
+      display: flex; flex-direction: column; align-items: center; gap: 2px;
+      min-width: 70px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px;
+      background: var(--field); color: var(--text); font: inherit; position: relative; cursor: pointer;
+    }
+    .insp-form.is-variant { border-style: dashed; }
+    .insp-form.is-active { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+    .insp-form .c { font-family: var(--han-font), var(--han-fallback); font-size: 46px; line-height: 1.1; }
+    .insp-form .cp { font: 11px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--faint); }
+    .insp-form .fn { font-size: 11px; color: var(--accent); }
+    .font-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+    .font-cell { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--field); }
+    .font-cell .fname { padding: 6px 9px; font-size: 11px; line-height: 1.4; color: var(--muted); border-bottom: 1px solid var(--line); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .font-cell .fglyph { display: grid; place-items: center; min-height: 96px; font-size: 56px; line-height: 1; padding: 8px; }
+
+    @media (max-width: 760px) {
+      main { padding: 16px; }
+      .hero { padding: 24px 20px; flex-wrap: wrap; }
+      .hero-right { align-items: flex-start; flex-direction: row; flex-wrap: wrap; gap: 10px; }
+      .col-cp, .col-py, .col-note { display: none; }
+      .inspector-head .big { font-size: 54px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="hero-left">
+        <h1>
+          <span class="title-kicker">中国国务院 2013 年发布 · 8105 字</span>
+          <span class="title-main">通用规范汉字表</span>
+        </h1>
+        <div class="eyebrow">《通用规范汉字表》· 附表一 规范字与繁体字、异体字对照表</div>
+      </div>
+      <div class="hero-right">
+        <button type="button" id="themeToggle" class="theme-toggle" aria-label="切换深浅色">🌙</button>
+        <div class="field-group">
+          <label for="fontSelect">字体</label>
+          <select id="fontSelect" aria-label="选择字体"></select>
+        </div>
+        <div class="slider-wrap">
+          <label for="sizeRange">字号</label>
+          <input id="sizeRange" type="range" min="22" max="52" value="30" aria-label="字号">
+        </div>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="controls-row">
+        <div class="search-wrap">
+          <input id="search" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="检索：字符（干）、拼音（gan / gān）、码位（U+5E72）或序号（1–8105）">
+          <button type="button" id="searchClear" class="search-clear" aria-label="清除">×</button>
+          <div id="ac" class="ac-list" hidden role="listbox"></div>
+        </div>
+        <label class="switch"><input type="checkbox" id="fltTrad">含对应繁体</label>
+        <label class="switch"><input type="checkbox" id="fltVar">含异体字</label>
+        <label class="switch"><input type="checkbox" id="fltNote">含附注</label>
+      </div>
+    </div>
+
+    <div class="result-meta">
+      <span id="resultCount"></span>
+      <span id="resultHint"></span>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-serial">序号</th>
+            <th class="col-gc">规范字</th>
+            <th class="col-cp">码位</th>
+            <th class="col-py">拼音</th>
+            <th>繁体字</th>
+            <th>异体字</th>
+            <th class="col-note">附注</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div id="sentinel"></div>
+      <div class="loading" id="loading" hidden>加载更多…</div>
+    </div>
+
+    <div class="legend">
+      <section>
+        <h2>字级划分</h2>
+        <p><span class="lv-badge" data-lv="1">一级</span> 常用字 3500 字（序号 1–3500）。</p>
+        <p><span class="lv-badge" data-lv="2">二级</span> 次常用字 3000 字（序号 3501–6500）。</p>
+        <p><span class="lv-badge" data-lv="3">三级</span> 专门领域用字 1605 字（序号 6501–8105）。</p>
+      </section>
+      <section>
+        <h2>繁体字与异体字</h2>
+        <p>表中<b>实线框</b>为对应的<span class="han-inline">繁体字</span>，同一规范字可有多个不同来源的繁体（如<span class="han-inline">干</span>→<span class="han-inline">乾/幹</span>）。</p>
+        <p><b>虚线框</b>为<span class="han-inline">异体字</span>，一般不再作为规范字使用。</p>
+      </section>
+      <section>
+        <h2>附注（评注）</h2>
+        <p><span class="swatch" style="background:#8f3f2b"></span><b>繁体另做规范字</b>：该繁体字本身也单独收作规范字。</p>
+        <p><span class="swatch" style="background:#8f6a3f"></span><b>异体另做规范字</b>：该异体字本身也单独收作规范字。</p>
+        <p><span class="swatch" style="background:#4d6d62"></span><b>异体字</b>：附有专门说明的异体字。附注全文详见官方 PDF。</p>
+      </section>
+    </div>
+
+    <p class="footer">
+      数据来源：《通用规范汉字表》（2013）字表与附表一。字体由 <a href="https://free-fonts.digitalhumanities.dev/" target="_blank" rel="noopener">free-fonts</a> 提供（文津明体、源起/源样明体、霞鹜文楷、Jigmo、思源等），按 <code>unicode-range</code> 切片、按需下载。三级字与异体字多为罕用字，若所选字体缺字会自动回退到覆盖更广的字体。<br>
+      开源项目：<a href="https://github.com/frankslin/cn-characters-standard" target="_blank" rel="noopener">github.com/frankslin/cn-characters-standard</a>
+    </p>
+  </main>
+
+  <div class="inspector" id="inspector" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="inspTitle">
+    <div class="inspector-panel">
+      <div class="inspector-head">
+        <div>
+          <div class="inspector-title-row">
+            <span class="big han" id="inspBig"></span>
+            <div>
+              <div id="inspTitle" style="font-size:16px;font-weight:600"></div>
+              <div class="inspector-meta" id="inspMeta"></div>
+              <div class="inspector-py" id="inspPy"></div>
+            </div>
+          </div>
+        </div>
+        <button class="inspector-close" id="inspClose" aria-label="关闭">×</button>
+      </div>
+      <div class="inspector-body" id="inspBody"></div>
+    </div>
+  </div>
+
+  <script src="./pinyin_data.js"></script>
+  <script src="./data.js"></script>
+  <script>
+    const DATA = window.GCTABLE;
+    const ROWS = DATA.rows;
+
+    const FALLBACK = '"WenJin Mincho Plane 0", "WenJin Mincho Plane 2", "WenJin Mincho Plane 3", "Jigmo", "Jigmo SC", serif';
+    const FONTS = [
+      { id: "noto-serif",  label: "思源宋体 SC · Noto Serif SC", family: '"Noto Serif SC"', weight: 400 },
+      { id: "noto-sans",   label: "思源黑体 SC · Noto Sans SC", family: '"Noto Sans SC"', weight: 400 },
+      { id: "wenjin",      label: "文津明体 · WenJin Mincho", family: '"WenJin Mincho Plane 0", "WenJin Mincho Plane 2", "WenJin Mincho Plane 3"', weight: 400 },
+      { id: "genki",       label: "源起明体 TC · Genki Mincho TC", family: '"GenKiMin2TC"', weight: 400 },
+      { id: "genyo",       label: "源样明体 TC · GenYo Mincho TC", family: '"GenYoMin2TC"', weight: 400 },
+      { id: "jigmo",       label: "字云 · Jigmo", family: '"Jigmo", "Jigmo SC"', weight: 400 },
+      { id: "lxgw-gb",     label: "霞鹜文楷 GB · LXGW WenKai GB", family: '"LXGW WenKai GB"', weight: 400 },
+      { id: "lxgw-tc",     label: "霞鹜文楷 TC · LXGW WenKai TC", family: '"LXGW WenKai TC"', weight: 400 },
+      { id: "lxgw",        label: "霞鹜文楷 · LXGW WenKai", family: '"LXGW WenKai"', weight: 400 },
+      { id: "black-sugar", label: "黑糖话梅 · Black Sugar Plum Candy", family: '"Black Sugar Plum Candy"', weight: 700 },
+      { id: "sys-serif",   label: "系统宋体 · System Serif", family: "serif", weight: 400 },
+      { id: "sys-sans",    label: "系统黑体 · System Sans", family: "sans-serif", weight: 400 },
+    ];
+
+    // ---------- helpers ----------
+    const $ = (sel) => document.querySelector(sel);
+    function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c])); }
+    function cpInt(cpStr) { const m = /([0-9a-fA-F]+)/.exec(cpStr || ""); return m ? parseInt(m[1], 16) : NaN; }
+    function fmtCp(n) { return "U+" + n.toString(16).toUpperCase().padStart(4, "0"); }
+    // ---------- autocomplete ----------
+    let acIdx = -1, acCandidates = [];
+
+    function getCandidates(q) {
+      if (!q.trim()) return [];
+      const pq = parseQuery(q);
+      const pyRe = pq.kind === "pinyin" ? pinyinRegex(pq.q) : null;
+      const out = [];
+      for (const r of ROWS) {
+        if (out.length >= 10) break;
+        if      (pq.kind === "cp"           && r._cps.has(pq.cp))                         out.push(r);
+        else if (pq.kind === "serial_or_cp" && (r.s === pq.serial || r._cps.has(pq.cp))) out.push(r);
+        else if (pq.kind === "pinyin"       && r._py.some(p => pyRe.test(p)))             out.push(r);
+        else if (pq.kind === "chars"        && pq.chars.some(c => r._chs.has(c)))         out.push(r);
+      }
+      return out;
+    }
+
+    function showAc(q) {
+      const el = $("#ac");
+      acCandidates = getCandidates(q);
+      acIdx = -1;
+      if (!acCandidates.length) { el.hidden = true; return; }
+      el.innerHTML = acCandidates.map((r, i) =>
+        `<div class="ac-item" data-idx="${i}" role="option">
+          <span class="ac-char">${esc(r.c)}</span>
+          <span class="ac-py">${esc(r._py.slice(0, 3).join("  "))}</span>
+          <span class="ac-serial">#${r.s}</span>
+        </div>`
+      ).join("");
+      el.hidden = false;
+    }
+
+    function closeAc() { $("#ac").hidden = true; acIdx = -1; acCandidates = []; }
+
+    function highlightAc(idx) {
+      document.querySelectorAll(".ac-item").forEach((el, i) => el.classList.toggle("is-active", i === idx));
+    }
+
+    function selectAc(r) {
+      draftQuery = r.c; state.query = r.c;
+      closeAc(); commit();
+    }
+
+    // Build a regex that matches a pinyin reading with or without tones.
+    // Plain vowels expand to all tonal variants; v is treated as ü.
+    function pinyinRegex(q) {
+      const map = { a:"[aāáǎà]", e:"[eēéěè]", i:"[iīíǐì]", o:"[oōóǒò]", u:"[uūúǔù]", v:"[üǖǘǚǜ]", ü:"[üǖǘǚǜ]" };
+      const pat = Array.from(q.toLowerCase()).map(c => map[c] || c.replace(/[-[\]{}()*+?.,\\^$|#]/g, "\\$&")).join("");
+      return new RegExp("^" + pat + "$");
+    }
+
+    // Precompute a search index: for each row, set of codepoint ints + set of chars
+    ROWS.forEach(r => {
+      const cps = new Set();
+      const chs = new Set();
+      cps.add(cpInt(r.cp)); chs.add(r.c);
+      (r.t || []).forEach(f => { cps.add(cpInt(f.cp)); chs.add(f.c); });
+      (r.v || []).forEach(f => { cps.add(cpInt(f.cp)); chs.add(f.c); });
+      r._cps = cps; r._chs = chs;
+      r._note = !!((r.t || []).some(f => f.n) || (r.v || []).some(f => f.n));
+      r._py = (window.PINYIN && window.PINYIN[r.c]) || [];
+    });
+
+    // ---------- state ----------
+    const state = {
+      query: "",
+      level: 0,
+      fltTrad: false,
+      fltVar: false,
+      fltNote: false,
+      font: "noto-serif",
+      size: 30,
+      theme: "light",
+    };
+    let draftQuery = state.query;
+
+    let filtered = ROWS;
+    let rendered = 0;
+    const BATCH = 80;
+
+    // ---------- search parsing ----------
+    // Returns {kind:'all'} | {kind:'cp', cp} | {kind:'serial_or_cp', serial, cp} | {kind:'pinyin', q} | {kind:'chars', chars:[...]}
+    function parseQuery(q) {
+      const t = q.trim();
+      if (!t) return { kind: "all" };
+      let m = /^(?:u\+|0x|\\u)\s*([0-9a-fA-F]{1,6})$/i.exec(t);
+      if (m) return { kind: "cp", cp: parseInt(m[1], 16) };
+      // pure decimal: 1-8105 → serial AND also try as hex codepoint; larger → decimal codepoint
+      if (/^\d+$/.test(t)) {
+        const n = parseInt(t, 10);
+        if (n >= 1 && n <= 8105) return { kind: "serial_or_cp", serial: n, cp: parseInt(t, 16) };
+        if (n <= 0x10FFFF) return { kind: "cp", cp: n };
+      }
+      // pinyin (letters + tone marks + ü/v, no digits) — before hex: CJK codepoints always contain digits
+      if (/^[a-züāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]+$/i.test(t)) return { kind: "pinyin", q: t };
+      // hex codepoint with at least one letter
+      if (/^[0-9a-fA-F]{2,6}$/.test(t) && /[a-fA-F]/.test(t)) return { kind: "cp", cp: parseInt(t, 16) };
+      if (/^[0-9a-fA-F]{4,6}$/.test(t)) return { kind: "cp", cp: parseInt(t, 16) };
+      // otherwise treat as characters
+      const chars = Array.from(t).filter(c => !/\s/.test(c));
+      return chars.length ? { kind: "chars", chars } : { kind: "all" };
+    }
+
+    function applyFilters() {
+      const pq = parseQuery(state.query);
+      const pyRe = pq.kind === "pinyin" ? pinyinRegex(pq.q) : null;
+      filtered = ROWS.filter(r => {
+        if (state.level && r.lv !== state.level) return false;
+        if (state.fltTrad && !(r.t && r.t.length)) return false;
+        if (state.fltVar && !(r.v && r.v.length)) return false;
+        if (state.fltNote && !r._note) return false;
+        if (pq.kind === "cp") { if (!r._cps.has(pq.cp)) return false; }
+        else if (pq.kind === "serial_or_cp") { if (r.s !== pq.serial && !r._cps.has(pq.cp)) return false; }
+        else if (pq.kind === "pinyin") { if (!r._py.some(p => pyRe.test(p))) return false; }
+        else if (pq.kind === "chars") { if (!pq.chars.some(c => r._chs.has(c))) return false; }
+        return true;
+      });
+      rendered = 0;
+      $("#tbody").innerHTML = "";
+      renderMore();
+      updateMeta(pq);
+    }
+
+    function updateMeta(pq) {
+      const n = filtered.length;
+      let desc = "";
+      if (pq.kind === "cp") desc = ` · 匹配码位 ${fmtCp(pq.cp)}（含繁体 / 异体）`;
+      else if (pq.kind === "serial_or_cp") desc = ` · 序号 ${pq.serial} / 码位 ${fmtCp(pq.cp)}`;
+      else if (pq.kind === "serial") desc = ` · 序号 ${pq.serial}`;
+      else if (pq.kind === "pinyin") desc = ` · 拼音 ${pq.q}`;
+      else if (pq.kind === "chars") desc = ` · 匹配字符 ${pq.chars.join(" ")}`;
+      $("#resultCount").innerHTML = `共 <b>${n.toLocaleString()}</b> 条${desc}`;
+      $("#resultHint").innerHTML = n === 0
+        ? '<span class="warn">未找到匹配项，试试其他字符、码位、序号或拼音。</span>'
+        : (state.query ? "" : "向下滚动浏览全表");
+    }
+
+    // ---------- rendering ----------
+    function formHtml(f, variant) {
+      const cat = f.n ? f.n.cat : "";
+      const badge = f.n ? `<span class="fn-badge" data-cat="${esc(cat)}" title="${esc(cat)}（${esc(f.n.f)}）">注</span>` : "";
+      const kind = variant ? "variant" : "trad";
+      return `<span class="form${variant ? " is-variant" : ""}" data-inspect-char="${esc(f.c)}" data-inspect-cp="${esc(f.cp)}" data-inspect-kind="${kind}" title="${esc(f.c)} ${esc(f.cp)}${cat ? " · " + esc(cat) : ""}">
+        ${badge}<span class="fchar han">${esc(f.c)}</span><span class="fcp">${esc(f.cp)}</span></span>`;
+    }
+
+    function rowHtml(r) {
+      const trad = (r.t && r.t.length) ? `<div class="forms">${r.t.map(f => formHtml(f, false)).join("")}</div>` : '<span class="cell-empty">—</span>';
+      const vars = (r.v && r.v.length) ? `<div class="forms">${r.v.map(f => formHtml(f, true)).join("")}</div>` : '<span class="cell-empty">—</span>';
+      const notes = [];
+      (r.t || []).concat(r.v || []).forEach(f => { if (f.n) notes.push(`<span class="note-tag">${esc(f.c)}·${esc(f.n.cat)}</span>`); });
+      const noteCell = notes.length ? `<div class="note-tags">${notes.join("")}</div>` : '<span class="cell-empty">—</span>';
+      const py = r._py;
+      let pyCell;
+      if (!py.length) {
+        pyCell = '<span class="cell-empty">—</span>';
+      } else {
+        const SHOW = 3;
+        const shown = py.slice(0, SHOW).map(p => `<span class="py">${esc(p)}</span>`).join("");
+        pyCell = py.length > SHOW
+          ? `${shown}<button type="button" class="py-more" data-full="${esc(py.join(" "))}">…</button>`
+          : shown;
+      }
+      return `<tr data-serial="${r.s}">
+        <td class="col-serial">${r.s}</td>
+        <td class="col-gc"><span class="gc" data-inspect-char="${esc(r.c)}" data-inspect-cp="${esc(r.cp)}" data-inspect-kind="norm"><span class="han">${esc(r.c)}</span></span></td>
+        <td class="col-cp">${esc(r.cp)}</td>
+        <td class="col-py">${pyCell}</td>
+        <td>${trad}</td>
+        <td>${vars}</td>
+        <td class="col-note">${noteCell}</td>
+      </tr>`;
+    }
+
+    function renderMore() {
+      if (rendered >= filtered.length) { $("#loading").hidden = true; return; }
+      const slice = filtered.slice(rendered, rendered + BATCH);
+      $("#tbody").insertAdjacentHTML("beforeend", slice.map(rowHtml).join(""));
+      rendered += slice.length;
+      $("#loading").hidden = rendered >= filtered.length;
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some(e => e.isIntersecting)) renderMore();
+    }, { rootMargin: "600px" });
+    io.observe($("#sentinel"));
+
+    // ---------- inspector ----------
+    // For the comparison grid, do not use the shared WenJin/Jigmo fallback chain.
+    // A broad ready fallback can satisfy shaping before the primary slice is used,
+    // so keep only a generic serif fallback here and let font-display: swap repaint.
+    function fontGridHtml(ch) {
+      return FONTS.map(ft => {
+        const stack = /^sys-/.test(ft.id) ? ft.family : `${ft.family}, serif`;
+        return `<div class="font-cell" data-fid="${ft.id}"><div class="fname" title="${esc(ft.label)}">${esc(ft.label)}</div>
+          <div class="fglyph" data-font-family="${esc(stack)}" data-font-weight="${esc(ft.weight)}">${esc(ch)}</div></div>`;
+      }).join("");
+    }
+
+    function applyGlyphFont(el) {
+      if (!el) return;
+      if (el.dataset.fontFamily) el.style.fontFamily = el.dataset.fontFamily;
+      if (el.dataset.fontWeight) el.style.fontWeight = el.dataset.fontWeight;
+    }
+
+    function repaintGlyph(el) {
+      if (!el) return;
+      applyGlyphFont(el);
+      const stack = el.dataset.fontFamily;
+      if (!stack) return;
+      el.style.fontFamily = "serif";
+      void el.offsetWidth;
+      el.style.fontFamily = stack;
+    }
+
+    // Two separate concerns, kept independent on purpose:
+    // 1) Eagerly FETCH each cell's slice via document.fonts.load(). The grid's
+    //    DOM font stack intentionally excludes broad CJK webfont fallbacks so
+    //    native font-display: swap can repaint with the primary slice once ready.
+    //    We still force the download fire-and-forget; never gate the UI on it.
+    // 2) RENDER through CSS properties set after HTML parsing. Do not put quoted
+    //    font family stacks inside a double-quoted style attribute; it truncates
+    //    the attribute before the target family can be applied.
+    function loadFontGrid(ch) {
+      const grid = $("#fontGrid");
+      if (!grid) return;
+      grid.querySelectorAll(".fglyph").forEach(applyGlyphFont);
+
+      if (ch && document.fonts && document.fonts.load) {
+        FONTS.forEach(ft => {
+          const cell = grid.querySelector(`.font-cell[data-fid="${ft.id}"]`);
+          if (!cell || /^sys-/.test(ft.id)) return;
+          const loads = ft.family.split(",").map(fam => {
+            try { return document.fonts.load(`${ft.weight} 56px ${fam.trim()}`, ch); }
+            catch (e) { return Promise.resolve(); }
+          });
+          Promise.allSettled(loads).then(() => repaintGlyph(cell.querySelector(".fglyph")));
+        });
+      }
+
+      const repaint = () => grid.querySelectorAll(".fglyph").forEach(repaintGlyph);
+      [250, 500, 1200, 2400, 4000].forEach(t => setTimeout(repaint, t));
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(repaint);
+    }
+
+    let inspectorRow = null;
+
+    function inspectorForms(r) {
+      return [{ c: r.c, cp: r.cp, label: "规范字", variant: false }]
+        .concat((r.t || []).map(f => ({ c: f.c, cp: f.cp, label: formLabel(f, false), variant: false })))
+        .concat((r.v || []).map(f => ({ c: f.c, cp: f.cp, label: formLabel(f, true), variant: true })));
+    }
+
+    function formLabel(f, variant) {
+      const base = variant ? "异体字" : "繁体字";
+      return f.n && f.n.cat !== base ? `${base} · ${f.n.cat}` : base;
+    }
+
+    function selectedFormIndex(forms, pick) {
+      if (!pick) return 0;
+      const i = forms.findIndex(f => f.c === pick.c && (!pick.cp || f.cp === pick.cp));
+      return i >= 0 ? i : 0;
+    }
+
+    function renderInspector(r, selectedIndex = 0) {
+      const forms = inspectorForms(r);
+      const selected = forms[selectedIndex] || forms[0];
+      $("#inspBig").textContent = selected.c;
+      $("#inspTitle").textContent = `${selected.label} ${selected.c} · 序号 ${r.s} · ${["一","二","三"][r.lv-1]}级`;
+      $("#inspMeta").textContent = `${selected.cp} · ${cpDecimalNote(selected.cp)}`;
+      const py = (window.PINYIN && window.PINYIN[selected.c]) || [];
+      $("#inspPy").innerHTML = py.map(p => `<span class="py">${esc(p)}</span>`).join("");
+      $("#inspBody").innerHTML = [
+        `<div class="insp-section"><h3>字形切换</h3><div class="insp-forms">
+          ${forms.map((f, i) => `<button type="button" class="insp-form${f.variant ? " is-variant" : ""}${i === selectedIndex ? " is-active" : ""}" data-form-index="${i}" aria-pressed="${i === selectedIndex}">
+            <span class="c">${esc(f.c)}</span><span class="cp">${esc(f.cp)}</span>
+            <span class="fn">${esc(f.label)}</span>
+          </button>`).join("")}</div></div>`,
+        `<div class="insp-section"><h3>各字体字形对比</h3><div class="font-grid" id="fontGrid">${fontGridHtml(selected.c)}</div></div>`
+      ].join("");
+      requestAnimationFrame(() => loadFontGrid(selected.c));
+    }
+
+    function openInspector(r, pick) {
+      inspectorRow = r;
+      renderInspector(r, selectedFormIndex(inspectorForms(r), pick));
+      $("#inspector").setAttribute("aria-hidden", "false");
+      document.body.classList.add("is-modal-open");
+    }
+    function cpDecimalNote(cpStr) { const n = cpInt(cpStr); return isNaN(n) ? "" : `十进制 ${n}`; }
+    function closeInspector() {
+      $("#inspector").setAttribute("aria-hidden", "true");
+      document.body.classList.remove("is-modal-open");
+    }
+
+    // ---------- font / theme / size ----------
+    function applyFont() {
+      const ft = FONTS.find(f => f.id === state.font) || FONTS[0];
+      document.documentElement.style.setProperty("--han-font", ft.family);
+      document.documentElement.style.setProperty("--han-weight", ft.weight);
+    }
+    function applySize() { document.documentElement.style.setProperty("--han-size", state.size + "px"); }
+    function applyTheme() {
+      document.documentElement.dataset.theme = state.theme;
+      const b = $("#themeToggle");
+      b.textContent = state.theme === "dark" ? "☀" : "🌙";
+    }
+
+    // Reflect current state onto every control widget.
+    function refreshUI() {
+      $("#search").value = draftQuery;
+      $("#fontSelect").value = state.font;
+      $("#sizeRange").value = state.size;
+      $("#fltTrad").checked = state.fltTrad;
+      $("#fltVar").checked = state.fltVar;
+      $("#fltNote").checked = state.fltNote;
+    }
+
+    // Single entry point after any state change. Pushes a history entry.
+    function commit() { applyFilters(); refreshUI(); syncHash(true); }
+
+    // ---------- URL hash ----------
+    function syncHash(push = false) {
+      const p = new URLSearchParams();
+      if (state.query) p.set("q", state.query);
+      if (state.level) p.set("lv", state.level);
+      if (state.fltTrad) p.set("t", "1");
+      if (state.fltVar) p.set("v", "1");
+      if (state.fltNote) p.set("n", "1");
+      if (state.font !== "noto-serif") p.set("f", state.font);
+      if (state.theme !== "light") p.set("th", state.theme);
+      const url = p.toString() ? "#" + p.toString() : location.pathname;
+      if (push) history.pushState(null, "", url);
+      else history.replaceState(null, "", url);
+    }
+    function readHash() {
+      const p = new URLSearchParams(location.hash.slice(1));
+      state.query = p.get("q") || "";
+      draftQuery = state.query;
+      state.level = Number(p.get("lv")) || 0;
+      state.fltTrad = p.get("t") === "1";
+      state.fltVar = p.get("v") === "1";
+      state.fltNote = p.get("n") === "1";
+      if (p.has("f") && FONTS.some(f => f.id === p.get("f"))) state.font = p.get("f");
+      if (p.get("th") === "dark") state.theme = "dark"; else if (!p.has("th")) state.theme = "light";
+    }
+
+    function commitSearch() {
+      if (state.query === draftQuery) return;
+      state.query = draftQuery;
+      commit();
+    }
+
+    // ---------- wire up ----------
+    function initControls() {
+      $("#fontSelect").innerHTML = FONTS.map(f => `<option value="${f.id}">${esc(f.label)}</option>`).join("");
+      refreshUI();
+
+      $("#search").addEventListener("input", (e) => {
+        draftQuery = e.target.value;
+        showAc(draftQuery);
+      });
+      $("#search").addEventListener("keydown", (e) => {
+        if ($("#ac").hidden) {
+          if (e.key === "Enter") { e.preventDefault(); commitSearch(); }
+          return;
+        }
+        if (e.key === "ArrowDown") {
+          e.preventDefault();
+          acIdx = Math.min(acIdx + 1, acCandidates.length - 1);
+          highlightAc(acIdx);
+        } else if (e.key === "ArrowUp") {
+          e.preventDefault();
+          acIdx = Math.max(acIdx - 1, -1);
+          highlightAc(acIdx);
+        } else if (e.key === "Enter") {
+          e.preventDefault();
+          if (acIdx >= 0 && acCandidates[acIdx]) selectAc(acCandidates[acIdx]);
+          else { closeAc(); commitSearch(); }
+        } else if (e.key === "Escape") {
+          closeAc();
+        }
+      });
+      $("#search").addEventListener("blur", () => setTimeout(closeAc, 150));
+      $("#ac").addEventListener("click", (e) => {
+        const item = e.target.closest(".ac-item");
+        if (!item) return;
+        selectAc(acCandidates[Number(item.dataset.idx)]);
+      });
+      $("#searchClear").addEventListener("click", () => {
+        draftQuery = ""; state.query = ""; closeAc(); commit(); $("#search").focus();
+      });
+      $("#fontSelect").addEventListener("change", (e) => { state.font = e.target.value; applyFont(); syncHash(); });
+      $("#sizeRange").addEventListener("input", (e) => { state.size = Number(e.target.value); applySize(); });
+      ["fltTrad", "fltVar", "fltNote"].forEach(id => {
+        $("#" + id).addEventListener("change", (e) => { state[id] = e.target.checked; commit(); });
+      });
+      $("#themeToggle").addEventListener("click", () => {
+        state.theme = state.theme === "dark" ? "light" : "dark"; applyTheme(); syncHash();
+      });
+      $("#tbody").addEventListener("click", (e) => {
+        const tr = e.target.closest("tr"); if (!tr) return;
+        const r = ROWS.find(x => x.s === Number(tr.dataset.serial)); if (!r) return;
+        const target = e.target.closest("[data-inspect-char]");
+        openInspector(r, target ? { c: target.dataset.inspectChar, cp: target.dataset.inspectCp } : null);
+      });
+      $("#inspBody").addEventListener("click", (e) => {
+        const btn = e.target.closest(".insp-form[data-form-index]");
+        if (!btn || !inspectorRow) return;
+        renderInspector(inspectorRow, Number(btn.dataset.formIndex));
+      });
+      $("#tbody").addEventListener("click", (e) => {
+        const btn = e.target.closest(".py-more");
+        if (!btn) return;
+        const cell = btn.closest("td");
+        cell.innerHTML = btn.dataset.full.split(" ").map(p => `<span class="py">${esc(p)}</span>`).join("");
+      });
+      $("#inspClose").addEventListener("click", closeInspector);
+      $("#inspector").addEventListener("click", (e) => { if (e.target === $("#inspector")) closeInspector(); });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && $("#inspector").getAttribute("aria-hidden") === "false") closeInspector();
+        if (e.key === "/" && document.activeElement !== $("#search")) { e.preventDefault(); $("#search").focus(); }
+      });
+    }
+
+    // ---------- boot ----------
+    // Restore state from URL without adding a new history entry (used for back/forward and direct URL edits).
+    function onNavigation() {
+      readHash();
+      applyFont(); applySize(); applyTheme();
+      $("#search").value = draftQuery;
+      applyFilters(); refreshUI();
+    }
+    window.addEventListener("hashchange", onNavigation);
+    window.addEventListener("popstate", onNavigation);
+    readHash();
+    initControls();
+    (() => {
+      const ctrl = $(".controls");
+      const update = () => {
+        const mt = parseFloat(getComputedStyle(ctrl).marginTop) || 0;
+        document.documentElement.style.setProperty("--controls-h", (ctrl.offsetHeight + mt) + "px");
+      };
+      new ResizeObserver(update).observe(ctrl);
+      update();
+    })();
+    applyFont();
+    applySize();
+    applyTheme();
+    applyFilters();
+  </script>
+</body>
+</html>

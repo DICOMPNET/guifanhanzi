@@ -2,7 +2,9 @@
 
 《通用规范汉字表》8105 个规范字的网页版检索工具，重点呈现**附表一《规范字与繁体字、异体字对照表》**及其附注。
 
-**在线访问：<https://tonggui.digitalhumanities.dev>**
+**在线访问：<https://more.dicomp.net/guifanhanzi/>**
+
+Fork 自：<https://github.com/frankslin/cn-characters-standard>
 
 ## 功能
 
